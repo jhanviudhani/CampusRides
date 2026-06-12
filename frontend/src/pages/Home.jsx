@@ -221,12 +221,17 @@ export default function Home() {
   // return the home page
   return (
     <div className="relative h-screen overflow-hidden">
-      <h2 className="text-3xl font-bold absolute top-5 left-5 z-10">
+     <h2 className="text-4xl font-extrabold absolute top-5 left-5 z-10 text-white drop-shadow-2xl">
   IITR Campus Ride
 </h2>
-      <div className="w-screen h-[70%] relative">
-        <LiveTracking />
-      </div>
+     <div
+  className="w-screen h-[70%] bg-cover bg-center relative"
+  style={{
+    backgroundImage: "url('/src/assets/image.png')",
+  }}
+>
+  <div className="absolute inset-0 bg-black/40"></div>
+</div>
       <div className="absolute flex justify-end flex-col w-full top-20 h-screen pointer-events-none">
         <div className="h-[33%] p-5 bg-white relative pointer-events-auto">
           <div className="flex justify-between">

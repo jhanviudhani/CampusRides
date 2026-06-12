@@ -1,99 +1,162 @@
-# Uber Clone
+# IITR Campus Ride
 
-A full-stack ride-sharing application that replicates core Uber functionalities. This application allows users to request rides, track drivers in real-time, and manage payments.
+## Project Overview
 
-## Features
+IITR Campus Ride is a full-stack web application developed to simplify transportation within the IIT Roorkee campus. The system allows students and staff to book E-Rickshaw rides between campus locations, while drivers (captains) can accept, manage, and complete ride requests in real time.
 
-- 🚗 Real-time ride tracking
-- 📍 Live location updates
-- 🗺️ Interactive maps and routing
-- 👤 User authentication
-- 🚘 Driver and passenger modes
-- 📱 Responsive design for mobile and desktop
-- 📍 Address autocomplete
-- 💰 Fare estimation
+The application provides separate interfaces for users and captains, live ride status updates using WebSockets, ride tracking, fare management, ride history, captain earnings tracking, and a rating system for service feedback.
 
-## Tech Stack
+---
 
-- **Frontend:**
-  - React.js
-  - Tailwind CSS
-  - MapBox/Google Maps API
+## Technology Stack
 
-- **Backend:**
-  - Node.js
-  - Express.js
-  - MongoDB
-  - Socket.IO for real-time updates
+### Frontend
 
-- **Authentication:**
-  - JWT
-  - Bcrypt
+* React.js
+* React Router DOM
+* Tailwind CSS
+* Axios
+* GSAP Animations
+* Socket.IO Client
 
+### Backend
 
-## Getting Started
+* Node.js
+* Express.js
+* Socket.IO
 
-### Prerequisites
+### Database
 
-- Node.js (v16 or higher)
-- MongoDB
-- npm or yarn
-- MapBox/Google Maps API key
+* MongoDB Atlas
+* Mongoose ODM
 
-### Installation
+### Authentication
 
-1. Clone the repository:
+* JSON Web Tokens (JWT)
+
+---
+
+## Setup Instructions
+
+### Clone Repository
+
 ```bash
-git clone https://github.com/yourusername/uber-clone.git
+git clone https://github.com/jhanviudhani/CampusRides.git
+cd CampusRides
 ```
 
-2. Install dependencies:
+### Install Frontend Dependencies
+
 ```bash
-cd uber-clone
+cd frontend
 npm install
 ```
 
-3. Configure environment variables:
-Create a `.env` file in the root directory:
-```env
-NEXT_PUBLIC_GOOGLE_MAPS_API_KEY=your_api_key
-MONGODB_URI=your_mongodb_uri
-STRIPE_SECRET_KEY=your_stripe_key
-JWT_SECRET=your_jwt_secret
+### Install Backend Dependencies
+
+```bash
+cd backend
+npm install
 ```
 
-4. Start the development server:
+### Environment Variables
+
+Create a `.env` file inside the backend directory:
+
+```env
+PORT=3000
+MONGO_URI=YOUR_MONGODB_CONNECTION_STRING
+JWT_SECRET=YOUR_SECRET_KEY
+```
+
+Create a `.env` file inside the frontend directory:
+
+```env
+VITE_BASE_URL=http://localhost:3000/api
+```
+
+---
+
+## Running the Application
+
+### Start Backend
+
 ```bash
+cd backend
 npm run dev
 ```
 
-## Key Features Explained
+### Start Frontend
 
-### 🗺️ Real-time Tracking
-- Live location updates using Socket.IO
-- Interactive map interface
-- Route visualization
+```bash
+cd frontend
+npm run dev
+```
 
-### 👤 User System
-- Driver and passenger profiles
-- Rating and review system
-- Ride history
-- Authentication and authorization
+Frontend:
 
-## Mobile Responsiveness
+```text
+http://localhost:5173
+```
 
-The application is fully responsive and provides a native-like experience on mobile devices:
-- Adaptive UI components
-- Touch-friendly interfaces
-- Mobile-first design approach
+Backend:
 
+```text
+http://localhost:3000
+```
 
-## License
+---
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+## Features
 
-## Acknowledgments
+### User Features
 
-- Inspired by Uber
-- Built with modern web technologies
-- Thanks to all contributors
+* User Registration and Login
+* Secure JWT Authentication
+* Book E-Rickshaw Rides
+* Select Pickup and Destination Locations
+* Real-Time Ride Updates
+* Live Driver Assignment
+* Ride Tracking
+* Ride Completion Notifications
+* Driver Rating System
+
+### Captain Features
+
+* Captain Registration and Login
+* Ride Request Notifications
+* Accept or Reject Ride Requests
+* OTP Verification Before Ride Start
+* Start and Complete Rides
+* Earnings Dashboard
+* Ride Statistics
+* Average Rating Tracking
+
+### System Features
+
+* Real-Time Communication using Socket.IO
+* MongoDB Cloud Database Integration
+* Protected Routes
+* Responsive User Interface
+* Automated Fare Calculation
+* Ride Status Management
+* Rating and Feedback System
+
+---
+
+## Future Enhancements
+
+* GPS Based Live Location Tracking
+* Online Payments
+* Ride History Dashboard
+* Multiple Vehicle Types
+* Campus Route Optimization
+* Admin Dashboard
+
+---
+
+## Author
+
+Jhanvi Udhani
+
+IITR Campus Ride Project

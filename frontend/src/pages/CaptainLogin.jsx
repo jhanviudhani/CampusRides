@@ -56,11 +56,9 @@ export default function CaptainLogin() {
   return (
     <div className="p-7 h-screen flex flex-col justify-between">
       <div>
-        <img
-          className="w-16 mb-10"
-          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYQy-OIkA6In0fTvVwZADPmFFibjmszu2A0g&s"
-          alt="uber"
-        />
+      <h1 className="text-3xl font-bold text-black">
+  IITR Campus Ride
+</h1>
         {/* Form */}
         <form onSubmit={handleFormSubmit}>
           <h3 className="text-lg font-medium mb-2">Enter your captain email</h3>

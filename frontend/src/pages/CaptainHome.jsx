@@ -137,11 +137,9 @@ console.log("ridePopupPanel =", ridePopupPanel);
   return (
     <div className="h-screen">
       <div className="fixed p-6 top-0 flex items-center justify-between w-screen z-10">
-        <img
-          className="w-16 z-10"
-          src="https://upload.wikimedia.org/wikipedia/commons/c/cc/Uber_logo_2018.png"
-          alt=""
-        />
+       <h2 className="text-2xl font-bold text-white z-10">
+  IITR Campus Ride
+</h2>
         <Link
           to="/captain-home"
           className=" h-10 w-10 bg-white flex items-center justify-center rounded-full"
@@ -159,11 +157,7 @@ console.log("ridePopupPanel =", ridePopupPanel);
         ref={ridePopupPanelRef}
         className="fixed w-full z-10 bottom-0 translate-y-full bg-white px-3 py-10 pt-12"
       >
-      {ride && (
-  <div className="fixed top-20 left-20 bg-red-500 text-white p-5 z-50">
-    RIDE FOUND
-  </div>
-)}
+      
         <RidePopUp
           ride={ride}
           setRidePopupPanel={setRidePopupPanel}
