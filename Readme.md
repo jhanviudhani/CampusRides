@@ -10,8 +10,7 @@ The application provides separate interfaces for users and captains, real-time r
 
 ## Demo Video
 
-https://drive.google.com/file/d/195fBUT8TO58kQYPchyB0KyWTK_AyT8en/view?usp=sharing
-
+https://drive.google.com/file/d/1llp2pIcs9CWc7GL6YTPxW3ZwlS6voI7G/view?usp=sharing
 ---
 
 ## Design Document
