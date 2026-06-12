@@ -10,6 +10,7 @@ import { SocketContext } from "../context/SocketContext";
 import { CaptainDataContext } from "../context/CaptainContext";
 import axios from "axios";
 import { HomeIcon } from "lucide-react";
+import campusImage from "../assets/image.png";
 import LiveTracking from "../components/LiveTracking";
 
 // Captain Home Page
@@ -147,9 +148,24 @@ console.log("ridePopupPanel =", ridePopupPanel);
           <HomeIcon className="h-6 w-6" />
         </Link>
       </div>
-      <div className="h-4/5">
-        <LiveTracking />
-      </div>
+      <div
+  className="h-4/5 bg-cover bg-center relative"
+  style={{
+    backgroundImage: `url(${campusImage})`,
+  }}
+>
+  <div className="absolute inset-0 bg-black/40"></div>
+
+  <div className="relative z-10 h-full flex items-center justify-center">
+    <div className="text-center text-white">
+      <h1 className="text-5xl font-bold">IITR Campus Ride</h1>
+      <p className="text-xl mt-2">E-Rickshaw Transportation System</p>
+      <button className="mt-6 bg-white text-black px-6 py-2 rounded-lg shadow-lg">
+        Fixed Fare ₹10
+      </button>
+    </div>
+  </div>
+</div>
       <div className="h-2/5 p-6">
         <CaptainDetails />
       </div>
