@@ -2,9 +2,21 @@
 
 ## Project Overview
 
-IITR Campus Ride is a full-stack web application developed to simplify transportation within the IIT Roorkee campus. The system allows students and staff to book E-Rickshaw rides between campus locations, while drivers (captains) can accept, manage, and complete ride requests in real time.
+IITR Campus Ride is a full-stack web application developed to simplify transportation within the IIT Roorkee campus. The platform enables students, faculty members, and staff to book E-Rickshaw rides between campus locations, while drivers (captains) can accept, manage, and complete ride requests in real time.
 
-The application provides separate interfaces for users and captains, live ride status updates using WebSockets, ride tracking, fare management, ride history, captain earnings tracking, and a rating system for service feedback.
+The application provides separate interfaces for users and captains, real-time ride updates using Socket.IO, ride tracking, captain earnings management, and a rating system for service feedback.
+
+---
+
+## Demo Video
+
+https://drive.google.com/file/d/195fBUT8TO58kQYPchyB0KyWTK_AyT8en/view?usp=sharing
+
+---
+
+## Design Document
+
+https://drive.google.com/file/d/1-JlodkuCDJheSleHA13kfGnYsSP_saO9/view?usp=sharing
 
 ---
 
@@ -16,7 +28,7 @@ The application provides separate interfaces for users and captains, live ride s
 * React Router DOM
 * Tailwind CSS
 * Axios
-* GSAP Animations
+* GSAP
 * Socket.IO Client
 
 ### Backend
@@ -59,17 +71,17 @@ cd backend
 npm install
 ```
 
-### Environment Variables
+### Configure Environment Variables
 
-Create a `.env` file inside the backend directory:
+Backend `.env`
 
 ```env
 PORT=3000
-MONGO_URI=YOUR_MONGODB_CONNECTION_STRING
+MONGODB_URI=YOUR_MONGODB_CONNECTION_STRING
 JWT_SECRET=YOUR_SECRET_KEY
 ```
 
-Create a `.env` file inside the frontend directory:
+Frontend `.env`
 
 ```env
 VITE_BASE_URL=http://localhost:3000/api
@@ -93,13 +105,13 @@ cd frontend
 npm run dev
 ```
 
-Frontend:
+Frontend URL:
 
 ```text
 http://localhost:5173
 ```
 
-Backend:
+Backend URL:
 
 ```text
 http://localhost:3000
@@ -113,11 +125,10 @@ http://localhost:3000
 
 * User Registration and Login
 * Secure JWT Authentication
-* Book E-Rickshaw Rides
-* Select Pickup and Destination Locations
+* Book Campus E-Rickshaw Rides
+* Pickup and Destination Selection
 * Real-Time Ride Updates
 * Live Driver Assignment
-* Ride Tracking
 * Ride Completion Notifications
 * Driver Rating System
 
@@ -125,20 +136,20 @@ http://localhost:3000
 
 * Captain Registration and Login
 * Ride Request Notifications
-* Accept or Reject Ride Requests
+* Accept Ride Requests
 * OTP Verification Before Ride Start
-* Start and Complete Rides
+* Complete Rides
 * Earnings Dashboard
-* Ride Statistics
-* Average Rating Tracking
+* Completed Ride Statistics
+* Rating Tracking
 
 ### System Features
 
 * Real-Time Communication using Socket.IO
-* MongoDB Cloud Database Integration
+* MongoDB Atlas Integration
 * Protected Routes
 * Responsive User Interface
-* Automated Fare Calculation
+* Fixed Fare Campus Ride System
 * Ride Status Management
 * Rating and Feedback System
 
@@ -146,17 +157,17 @@ http://localhost:3000
 
 ## Future Enhancements
 
-* GPS Based Live Location Tracking
-* Online Payments
+* GPS-Based Live Location Tracking
+* Online Payment Integration
 * Ride History Dashboard
-* Multiple Vehicle Types
-* Campus Route Optimization
+* Multiple Vehicle Categories
+* Route Optimization
 * Admin Dashboard
 
 ---
 
 ## Author
 
-Jhanvi Udhani
+**Jhanvi Udhani**
 
-IITR Campus Ride Project
+IITR Campus Ride – E-Rickshaw Transportation System
